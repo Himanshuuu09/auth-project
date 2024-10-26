@@ -1,3 +1,8 @@
-from django.db import models
+# models.py
+# from django.contrib.auth.models import AbstractUser
+# from django.db import models
 
-# Create your models here.
+# class CustomUser(AbstractUser):
+#     otps= models.CharField(max_length=6, blank=True, null=True)  # Store a 6-digit OTP
+#         def __str__(self):
+#         return self.username

@@ -27,6 +27,15 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+# settings.py
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'  # For Gmail
+EMAIL_PORT = 587  # For TLS
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'himanshurajput0816@gmail.com'  # Your email address
+EMAIL_HOST_PASSWORD = 'Himanshu01@@'  # Your email password
+
 
 # Application definition
 
@@ -41,6 +50,7 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'authapp',  # Your new authentication app
     'rest_framework_simplejwt',
+    'notes',
 ]
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
@@ -91,6 +101,7 @@ DATABASES = {
 }
 
 
+
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
 
@@ -131,3 +142,4 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+  # Update this line with your app name and model name
